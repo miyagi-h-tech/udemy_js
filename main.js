@@ -1,15 +1,12 @@
-console.log('テスト123');
+// 変数 変わる数 variable
 
-全て半角
+// 昔
+// var test = 123;
+// var test = 'テスト';
 
-123 //数字
-'テスト'
-"テスト"
-'テ"ス"ト'
+// let test = 123;
+// test += 123;
 
-コメントアウト
-//
-/**
- * コメントアウト
- *
- */
+const test = 123; //constant 定数
+
+console.log(test);
