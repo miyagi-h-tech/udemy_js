@@ -17,3 +17,30 @@ const member = {
 };
 
 console.log(member.hobby);
+
+const member_2 = {
+  '本田':{
+    'height':170,
+    'hobby':'サッカー',
+  },
+  'kagawa':{
+    'height':'165',
+    'hobby':'サッカー',
+  }
+};
+
+console.log(member_2.kagawa.height);
+
+const member_3 = {
+  '1kumi':{
+    '本田':{
+      'height':170,
+      'hobby':'サッカー'
+    },
+    '香川':{
+    },
+  },
+  '2kumi':{},
+}
+
+console.log(member_3);
