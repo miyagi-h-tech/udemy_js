@@ -5,35 +5,41 @@
   // 条件が偽なら実行
 // }
 
-const height = 90;
+const height = 91;
 
 //console.log(typeof height);
 
-if (height >= 91) {
-  console.log('身長は' + height + 'cmです。');
+// if (height >= 91) {
+//   console.log('身長は' + height + 'cmです。');
+// }
+
+// if (height <= 90) {
+//   console.log('身長は90cm以下です。');
+// }
+
+if (height !== 90) { //否定 //型も判定
+  console.log('身長は' + height + 'になっています。');
 }
 
-if (height <= 90) {
-  console.log('身長は90cm以下です。');
+// AND, OR
+
+const signal_1 = 'red';
+const signal_2 = 'yellow';
+
+if (signal_1 === 'red' && signal_2 === 'blue') {
+  console.log('赤と青');
 }
 
-// == 一致
-// === 型も一致
-
-const signal = 'blue'
-
-if (signal === 'red') {
-  console.log('止まれ');
-} else if (signal === 'yellow') {
-  console.log('一旦停止');
-} else {
-  console.log('進む');
+if (signal_1 === 'red' || signal_2 === 'blue') {
+  console.log('赤');
 }
 
-const speed = 60;
+// 三項演算子
+// if else
+//条件 ? 真 : 偽
 
-if (signal === 'blue') {
-  if (speed >= 60) { //ネスト
-    console.log('スピード違反');
-  }
-}
+const score = 80;
+
+const comment = score >= 80 ? 'good' : 'not good';
+
+console.log(comment);
