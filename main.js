@@ -1,16 +1,15 @@
-const test_1 = 4;
-let test_2 = 3;
 
-//test_2 += 3;
+// if (条件) {
+//   条件が真なら実行
+// }
 
-const test_3 = test_1 % test_2;
+const height = '90';
 
-// 3つに分けたい
-1
-2
-3・・あまりが0
-4
-5
-6 ・・余りが0
+console.log(typeof height);
 
-console.log(test_3);
+if (height === 90) {
+  console.log('身長は' + height + 'cmです。');
+}
+
+// == 一致
+// === 型も一致
