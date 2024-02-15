@@ -1,19 +1,31 @@
-//繰り返し
-// for 繰り返しの回数の設定
-// for in あまり使われていない
-// for of (ES6から) 使いやすい
+// switch
+// if 見やすい
 
-const scores = [10, 20, 30];
+const data = 1;
 
-// one of them
-for( score of scores) {
-  console.log(score);
+switch (data) {
+  case 1:
+    console.log('1です');
+    break;
+  case 2:
+    console.log('2です');
+    break;
+  case 3:
+    console.log('3です');
+    break;
+  default:
+    console.log('1-3ではありません');
+    break;
 }
 
-// オブジェクト {}
+if (data === 1) {
+  console.log(1);
+}
 
-// for(初期値; 繰り返す条件; 増減 ++ --)
+if (data === 2) {
+  console.log(2);
+}
 
-for (let i = 0; i <= 10; i++) {
-  console.log(i);
+if (data === 3) {
+  console.log(3);
 }
