@@ -1,45 +1,19 @@
+//繰り返し
+// for 繰り返しの回数の設定
+// for in あまり使われていない
+// for of (ES6から) 使いやすい
 
-// if (条件) {
-//   条件が真なら実行
-// } else {
-  // 条件が偽なら実行
-// }
+const scores = [10, 20, 30];
 
-const height = 91;
-
-//console.log(typeof height);
-
-// if (height >= 91) {
-//   console.log('身長は' + height + 'cmです。');
-// }
-
-// if (height <= 90) {
-//   console.log('身長は90cm以下です。');
-// }
-
-if (height !== 90) { //否定 //型も判定
-  console.log('身長は' + height + 'になっています。');
+// one of them
+for( score of scores) {
+  console.log(score);
 }
 
-// AND, OR
+// オブジェクト {}
 
-const signal_1 = 'red';
-const signal_2 = 'yellow';
+// for(初期値; 繰り返す条件; 増減 ++ --)
 
-if (signal_1 === 'red' && signal_2 === 'blue') {
-  console.log('赤と青');
+for (let i = 0; i <= 10; i++) {
+  console.log(i);
 }
-
-if (signal_1 === 'red' || signal_2 === 'blue') {
-  console.log('赤');
-}
-
-// 三項演算子
-// if else
-//条件 ? 真 : 偽
-
-const score = 80;
-
-const comment = score >= 80 ? 'good' : 'not good';
-
-console.log(comment);
