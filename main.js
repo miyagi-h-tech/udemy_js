@@ -1,14 +1,13 @@
-const myMap = new Map();
+//const fruits = new Array();
+const fruits = [
+  'りんご', 'バナナ'
+];
 
-myMap.set('id', 3);
-myMap.set('name', '本田');
+console.log(fruits);
 
-console.log(myMap);
+fruits.push('みかん');
+console.log(fruits);
 
-console.log(myMap.get('name'));
-
-const valueList = myMap.values();
-
-for (value of valueList) {
-  console.log(value);
-}
+fruits.forEach(function (input){
+  console.log(input);
+});
