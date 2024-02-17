@@ -1,26 +1,14 @@
-const test = 'テスト';
-const test_2 = 'です';
+const myMap = new Map();
 
-console.log(test.length);
+myMap.set('id', 3);
+myMap.set('name', '本田');
 
-console.log(test.concat(test_2));
+console.log(myMap);
 
-const greeting = '  Hello world!  '
+console.log(myMap.get('name'));
 
-console.log(greeting);
-// expected output: "  Hello wordl!  ";
+const valueList = myMap.values();
 
-console.log(greeting.trim());
-// expected output: "Hello world!";
-
-const str = 'Mozilla';
-
-console.log(str.substring(1,3));
-// expected output: "oz"
-
-console.log(str.substring(2));
-// expected output: "zilla"
-
-const test_3 = 'テストです';
-
-console.log(test_3.replace('テスト', 'ファイト'));
+for (value of valueList) {
+  console.log(value);
+}
