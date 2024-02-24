@@ -1,37 +1,16 @@
-// const postalCode = '123-4657';
+'use strict';
+const globalVariable = 'グローバル';
 
-const postal = {
+function checkScope() {
+  const localVariable = 'ローカル'; //constを外すとグローバル関数になる。
 
-  postalCode: '123-4657',
+  //console.log(localVariable);
+  console.log(globalVariable);
 
-  // this.postalCode
-  checkPostalCode() {
-    const replaced = this.postalCode.replace('-', '').length;
-    //const length = replaced.length;
-
-    if (replaced === 7) {
-      return true;
-    }
-
-    return false;
-  }
 }
 
-console.log(postal.checkPostalCode());
+//console.log(globalVariable);
 
-const person = {
-  name: '本田',
-  age: 30,
+checkScope();
 
-  getName() {
-    console.log(this.name);
-    return this;
-  },
-
-  getAge() {
-    console.log(this.age);
-    return this;
-  }
-};
-
-person.getName().getAge();
+//console.log(localVariable);
