@@ -1,12 +1,17 @@
-// const test = new Object();
-const test = { //簡単な書き方
-  test1:10,
-  test2:20,
-  test3:30,
+const postalCode = '123-46578';
+
+// JavaScriptはcamelCase
+// HTML/CSS 大文字小文字を区別しない snake_case
+// 英語 動詞+名刺
+function checkPostalCode(string) {
+  const replaced = string.replace('-', '');
+  const length = replaced.length;
+
+  if (length === 7) {
+    return true;
+  }
+
+  return false;
 }
 
-console.log(Object.values(test));
-
-for (value of Object.values(test)) {
-  console.log(value);
-}
+console.log(checkPostalCode(postalCode));
