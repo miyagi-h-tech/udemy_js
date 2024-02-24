@@ -1,17 +1,20 @@
-const postalCode = '123-46578';
+// const postalCode = '123-4657';
 
-// JavaScriptはcamelCase
-// HTML/CSS 大文字小文字を区別しない snake_case
-// 英語 動詞+名刺
-function checkPostalCode(string) {
-  const replaced = string.replace('-', '');
-  const length = replaced.length;
+const postal = {
 
-  if (length === 7) {
-    return true;
+  postalCode: '123-46578',
+
+  // this.postalCode
+  checkPostalCode() {
+    const replaced = this.postalCode.replace('-', '');
+    const length = replaced.length;
+
+    if (length === 7) {
+      return true;
+    }
+
+    return false;
   }
-
-  return false;
 }
 
-console.log(checkPostalCode(postalCode));
+console.log(postal.checkPostalCode());
