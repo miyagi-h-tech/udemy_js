@@ -15,25 +15,36 @@
   </style>
 </head>
 <body>
-  <div id="test">
-    <ul>
-      <li class="test_list blue">テスト1</li>
-      <li class="test_list">テスト2</li>
-      <li class="test_list">テスト3</li>
-    </ul>
+  <div id="grand-father">
+    <div id="parent">
+      <div id="target">
+        自分
+      </div>
+    </div>
+    <div id="divList">
+      <div class="div1">テスト1</div>
+      <div class="div2">テスト2</div>
+      <div class="div3">テスト3</div>
+    </div>
   </div>
   <script>
-    const test = document.getElementById('test').classList.add('red');
-    // test.classList.add('red');
-    // // 返り値 Element.classList.toggle
+    const target = document.getElementById('target');
+    const newDiv = document.createElement('div');
+    newDiv.id = 'test';
+    newDiv.classList.add('red');
+    newDiv.textContent = 'テスト';
+    // target.appendChild(newDiv);
+    target.parentNode.appendChild(newDiv);
 
-    // const testList = document.querySelector('.test_list');
-    // testList.classList.remove('blue');
-    // // 返り値 Element
-    // const testLists = document.querySelectorAll('.test_list');
-    // console.log(test);
-    // console.log(testList);
-    // console.log(testLists);
+    const targetList = document.getElementById('divList').firstElementChild;
+    const reference = document.querySelector('.div1').nextElementSibling;
+    const newElement = document.createElement('div');
+
+    console.log(targetList);
+
+    newElement.classList.add('div4');
+    newElement.textContent = '追加分';
+    targetList.insertBefore(newElement, reference);
   </script>
 </body>
 </html>
