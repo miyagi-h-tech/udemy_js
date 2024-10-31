@@ -20,3 +20,18 @@ formTest1YourName.addEventListener('input', () => {
 
 const formTest2 = document.forms.form_test2;
 console.log(formTest2);
+
+
+const preview = document.forms.form_test1.preview;
+document.forms.form_test1.image_file.addEventListener('change', e => {
+    console.log(e.target.files[0]);
+    const uploadFile = e.target.files[0];
+
+    //FileReader
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+        preview.src = reader.result; //Base64
+        console.log(preview.src);
+    });
+    reader.readAsDataURL(uploadFile);
+});
